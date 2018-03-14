@@ -7,9 +7,7 @@ module.exports = {
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:graphql/recommended",
     "plugin:import/recommended",
-    "plugin:node/recommended",
     "prettier",
   ],
   "parserOptions": {
@@ -23,14 +21,25 @@ module.exports = {
     "sourceType": "module"
   },
   "plugins": [
-    "import",
     "react",
-    "graphql"
+    "import",
+    "graphql",
   ],
   "globals": {
     "graphql": true
   },
+  "settings": {
+    "import/ignore": [
+      "../theme/typography"
+    ],
+  },
   "rules": {
+    "import/unambiguous": 0,
+
+    "react/jsx-uses-vars": 1,
+    "react/prop-types": 0,
+    "react/display-name": 0,
+
     "accessor-pairs": "error",
     "array-bracket-newline": "error",
     "array-bracket-spacing": "error",
@@ -105,9 +114,6 @@ module.exports = {
     "indent-legacy": "off",
     "init-declarations": "error",
     "jsx-quotes": "error",
-    "react/jsx-uses-vars": 1,
-    "react/prop-types": 0,
-    "react/display-name": 0,
     "key-spacing": "error",
     "keyword-spacing": "error",
     "line-comment-position": "error",
@@ -131,7 +137,7 @@ module.exports = {
     "new-parens": "error",
     "newline-after-var": "off",
     "newline-before-return": "off",
-    "newline-per-chained-call": "error",
+    "newline-per-chained-call": "off",
     "no-alert": "error",
     "no-array-constructor": "error",
     "no-await-in-loop": "error",
