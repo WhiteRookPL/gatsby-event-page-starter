@@ -17,12 +17,12 @@ export default ({ children, data }) => {
 
   const siteCanonicalLink = data.site.siteMetadata.siteUrl;
 
-  const twitterHandle = data.site.siteMetadata.socialMedia.twitter;
-  const facebookFanPage = data.site.siteMetadata.socialMedia.facebook;
+  const { twitter, facebook, meetup } = data.site.siteMetadata.socialMedia;
 
   const socialProfiles = {
-    twitterProfile: `https://twitter.com/${twitterHandle}`,
-    facebookProfile: `https://facebook.com/${facebookFanPage}`,
+    twitterProfile: `https://twitter.com/${twitter}`,
+    facebookProfile: `https://facebook.com/${facebook}`,
+    meetupProfile: `https://www.meetup.com/${meetup}`,
   };
 
   return (
@@ -43,7 +43,7 @@ export default ({ children, data }) => {
         <meta name="author" content={author} />
         <meta name="tags" content={tags} />
 
-        <meta property="twitter:site" content={`@${twitterHandle}`} />
+        <meta property="twitter:site" content={`@${twitter}`} />
 
         <meta property="og:url" content={siteCanonicalLink} />
         <meta property="og:title" content={headTitle} />
@@ -78,8 +78,9 @@ export const query = graphql`
         siteUrl
         tags
         socialMedia {
-          twitter
           facebook
+          meetup
+          twitter
         }
         contactData {
           email

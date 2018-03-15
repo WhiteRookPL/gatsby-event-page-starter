@@ -18,7 +18,7 @@ const LogoImage = styled.img`
 `;
 
 const Title = styled.h1`
-  font-size: ${rhythm(0.7)};
+  font-size: ${rhythm(1)};
 `;
 
 const NoLink = styled(Link)`
@@ -30,7 +30,7 @@ export const NavigationBar = ({ title }) => (
   <Navigation>
     <Grid fluid>
       <Row center={`xs`} middle={`xs`}>
-        <Col sm={6} xs={12}>
+        <Col md={6} sm={12}>
           <NoLink to={`/`}>
             <Row center={`xs`} middle={`xs`}>
               <Col md={3} sm={12}>
@@ -42,18 +42,21 @@ export const NavigationBar = ({ title }) => (
             </Row>
           </NoLink>
         </Col>
-        <Col sm={6} xs={12}>
+        <Col md={6} sm={12}>
           <Row center={`xs`} middle={`xs`}>
-            <Col md={12} lg={3}>
-              <Link to={`/events`}>Events</Link>
+            <Col xs={12}>
+              <Link to={`/events`}>Past Events</Link>
             </Col>
-            <Col md={12} lg={3}>
-              <Link to={`/computer-science-nerdz`}><em>Nerdz</em></Link>
+            <Col xs={12}>
+              <Link to={`/book-club`}>Book Club</Link>
             </Col>
-            <Col md={12} lg={3}>
+            <Col xs={12}>
+              <Link to={`/computer-science-nerdz`}>Computer Science <em>Nerdz</em></Link>
+            </Col>
+            <Col xs={12}>
               <Link to={`/organizers`}>About</Link>
             </Col>
-            <Col md={12} lg={3}>
+            <Col xs={12}>
               <Link to={`/#contact`}>Contact</Link>
             </Col>
           </Row>

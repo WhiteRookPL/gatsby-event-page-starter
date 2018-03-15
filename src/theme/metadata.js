@@ -11,6 +11,7 @@ module.exports = {
   socialMedia: {
     twitter: `@fun_miners`,
     facebook: `functionalminers`,
+    meetup: `Functional-Miners`,
   },
 
   contactData: {

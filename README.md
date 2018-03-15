@@ -1,9 +1,9 @@
-# gatsby-event-page
+# gatsby-event-page-starter
 
 ## Using this starter
 
 ```bash
-~ $ gatsby new gatsby-site https://github.com/WhiteRookPL/gatsby-event-page
+~ $ gatsby new gatsby-site https://github.com/WhiteRookPL/gatsby-event-page-starter
 ```
 
 ## Dependencies
