@@ -1,3 +1,5 @@
+const privateMetadata = require(`./metadata.private.js`);
+
 module.exports = {
   siteUrl: `https://functional-miners.org`,
 
@@ -18,6 +20,5 @@ module.exports = {
     email: `functionalminers@gmail.com`,
   },
 
-  googleAnalyticsTrackingId: `1234567890`,
-  facebookAppId: `1234567890`,
+  ...privateMetadata
 };

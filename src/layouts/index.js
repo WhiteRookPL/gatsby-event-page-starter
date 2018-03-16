@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 
 import { styles } from "../components/content";
+import { CookieBar } from "../components/cookies";
 import { NavigationBar } from "../components/navigation";
 import { SummarySection } from "../components/summary";
 
@@ -26,7 +27,7 @@ export default ({ children, data }) => {
   };
 
   return (
-    <Main>
+    <div>
       <Helmet>
         <html lang="en" />
 
@@ -56,14 +57,17 @@ export default ({ children, data }) => {
 
         <link rel="canonical" href={siteCanonicalLink} />
       </Helmet>
-      <header>
-        <NavigationBar title={title} />
-      </header>
-      {children()}
-      <footer>
-        <SummarySection social={socialProfiles} contact={contactData} />
-      </footer>
-    </Main>
+      <Main>
+        <header>
+          <NavigationBar title={title} />
+        </header>
+        {children()}
+        <footer>
+          <SummarySection social={socialProfiles} contact={contactData} />
+        </footer>
+      </Main>
+      <CookieBar />
+    </div>
   );
 };
 

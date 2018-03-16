@@ -22,7 +22,11 @@ export const query = graphql`
         date
         tags
         where {
-          location
+          location {
+            lat
+            lng
+          }
+          link
           name
         }
       }

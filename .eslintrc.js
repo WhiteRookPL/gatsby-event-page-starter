@@ -26,7 +26,8 @@ module.exports = {
     "graphql",
   ],
   "globals": {
-    "graphql": true
+    "graphql": true,
+    "google": true,
   },
   "settings": {
     "import/ignore": [
