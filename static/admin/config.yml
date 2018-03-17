@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: WhiteRookPL/gatsby-event-page-starter
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: events
+    label: Event
+    folder: src/events
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: date
+        label: Date
+        widget: datetime
+      - name: tags
+        label: Tags
+        widget: list
+      - name: where
+        label: Place
+        widget: object
+        fields:
+          - name: name
+            label: Place name
+            widget: string
+          - name: link
+            label: Google Maps URL
+            widget: string
+          - name: location
+            label: Coordinates
+            widget: object
+            fields:
+              - name: lat
+                label: Latitude
+                type: Number
+              - name: lng
+                label: Longitude
+                type: Number
+      - name: body
+        label: Content
+        widget: markdown

@@ -85,5 +85,8 @@ module.exports = {
         language: `en_US`,
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+    },
   ],
 };
